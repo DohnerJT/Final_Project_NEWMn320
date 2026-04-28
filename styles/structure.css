@@ -1,0 +1,39 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+html, body {
+ height: 100%;
+ display: flex;
+ justify-content: center;
+}
+h1, h2, h3, h4, h5, h6, p {
+ margin-bottom: 16px
+}
+
+#MainBody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px dotted black;temp border */
+    
+    width: 1000px;  
+}
+
+nav {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#curentContaner {
+    border: 2px solid black;
+    margin: 20px 10px;
+    height: 700px;
+    
+}
+
+
+

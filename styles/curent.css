@@ -1,0 +1,124 @@
+
+#curentTitle {
+    border: 2px solid black;
+    margin: 5px auto auto 5px;
+   
+}
+
+#curentDashbored{
+    border: 2px solid green;
+    margin: 5px 5px auto 5px;
+    height: 350px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.curentDashTile{
+    border: 2px solid red;
+    width: 240px;
+    height: 250px;
+}
+
+#curentCondition{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#consitionImg{
+    margin: 5px auto auto 45px;
+    height: 150px;
+    width: 150px;
+}
+
+#curentTemp{
+    text-align: center;
+}
+
+#curentTemp h1{
+    font-size: 50px;
+}
+
+#tempFeel{
+    margin-bottom: 20px;
+}
+
+#tempFeel h2{
+    margin-bottom: 5px;
+
+}
+
+#tempFeel h3{
+    margin-top: 0;
+
+}
+
+#curentMesures{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.CurMesBar{
+    width: 90%;
+    border: 1px dashed green;
+}
+
+#curentHumidity, #curentWindSpeed, #curentWindDirection{
+    display: flex;
+        align-items: center;
+        justify-content: space-between;
+}
+
+#curentSun{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#sunRiseBox, #sunSetBox{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px dashed blue;
+}
+
+#sunRiseBox img, #sunSetBox img{
+    height: 50px;
+    width: 50px;
+}
+
+#sunRiseBox h3, #sunSetBox h3{
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+
+#curentHourly{
+    border: 2px solid blue;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: min(1px, 20px)
+    
+}
+
+.curHourTile{
+    border: 2px solid orange;
+    width: 125px;
+    height: 190px;
+    margin: 10px;
+}
+
+.curHourTile h3{
+    text-align: center;
+    margin-top: 1px;
+    margin-bottom: 2px;
+}
+
