@@ -20,6 +20,8 @@ export class Currentday {
 
         this.sunRise = new Date(weatherJSON.sys.sunrise * 1000);
         this.sunSet = new Date(weatherJSON.sys.sunset * 1000);
+
+        this.description = weatherJSON.weather[0].description;
     }
 
     setDayHour(weatherJSON) {
@@ -49,13 +51,18 @@ export class Currentday {
         let hourlyBlocks;
 
         this.hourly.forEach(block => {
-            hourlyBlocks += block.CreateBlock();
+            if(hourlyBlocks === undefined){
+                hourlyBlocks = block.CreateBlock();
+            } else {
+                hourlyBlocks += block.CreateBlock();
+            }
+
         })
 
         let dash = `
             <div id="curentContaner">
             <div id="curentTitle">
-                <h2>${this.dateTime.toLocaleDateString()}</h2>
+                <h2>${this.makeDate()}</h2>
             </div>
             <div id="curentDashbored">
                 <div id="curentCondition" class="curentDashTile">
@@ -99,7 +106,7 @@ export class Currentday {
                         <div id="sunSetBox">
                             <img src="../images/sunset.png" alt="">
                             <h3>Sunset</h3>
-                            <h3>${this.sunSet.toLocaleTimeString()}
+                            <h3>${this.sunSet.toLocaleTimeString()}</h3>
                         </div>
                     </div>
 
@@ -125,5 +132,53 @@ export class Currentday {
             dailyBlocks += block.CreateBlock();
         })
         return dailyBlocks;
+    }
+
+    makeDate(){
+        let dateString;
+
+        let month = this.dateTime.getMonth() + 1;
+
+        switch(month){
+            case 1:
+                dateString = "January";             
+                break;
+            case 2:
+                dateString = "February";
+
+            case 3:
+                dateString = "March";
+                break;
+            case 4:
+                dateString = "April";
+                break;  
+            case 5:
+                dateString = "May";
+                break;
+            case 6:
+                dateString = "June";
+                break;  
+            case 7:
+                dateString = "July";
+                break;      
+            case 8:
+                dateString = "August";
+                break;
+            case 9:
+                dateString = "September";
+                break;
+            case 10:
+                dateString = "October";
+                break;
+            case 11:
+                dateString = "November";
+                break;
+            case 12:    
+                dateString = "December";
+                break;
+        }   
+        dateString += ` ${this.dateTime.getDate()}, ${this.dateTime.getFullYear()}`;
+
+        return dateString;
     }
 }

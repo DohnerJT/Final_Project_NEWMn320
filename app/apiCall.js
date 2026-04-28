@@ -1,5 +1,6 @@
 
 import { Currentday } from "./currentClass.js";
+import { animate } from "./animate.js";
 
 let key = "e0217525f98640b799f35f2348c81445";
 let key2 = "9d1d45c0027e9178ed578fbeb5679ac6";
@@ -79,6 +80,7 @@ async function getWeatherForecast() {
 
 function DisplayData() {
     let target = document.getElementById("MainBody");
-    target.innerHTML = curentConditions.makeCurentDash();
+    target.innerHTML += curentConditions.makeCurentDash();
     target.innerHTML += curentConditions.makeDaily()
+    animate();
 }   

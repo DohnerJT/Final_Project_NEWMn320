@@ -1,6 +1,6 @@
 
 #curentTitle {
-    border: 2px solid black;
+
     margin: 5px auto auto 5px;
    
 }
@@ -64,7 +64,6 @@
 
 .CurMesBar{
     width: 90%;
-    border: 1px dashed green;
 }
 
 #curentHumidity, #curentWindSpeed, #curentWindDirection{
@@ -85,7 +84,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px dashed blue;
+    
 }
 
 #sunRiseBox img, #sunSetBox img{
@@ -112,7 +111,7 @@
 .curHourTile{
     border: 2px solid orange;
     width: 125px;
-    height: 190px;
+    height: 200px;
     margin: 10px;
 }
 
